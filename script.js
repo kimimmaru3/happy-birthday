@@ -2,11 +2,14 @@ function showMessage(type) {
   document.getElementById("main-page").style.display = "none";
   document.getElementById("second-page").style.display = "block";
 
+  // Ambil nama dari input
+  let ownerName = document.getElementById("ownerName").value || "Sahabat";
+
   let msg = "";
   if (type === "surat") {
-    msg = "Kepada Sahabat Tersayang,\nSemoga hari lahirmu dipenuhi dengan kebahagiaan, kesihatan, dan kejayaan.\nTerima kasih kerana menjadi insan yang memberi inspirasi dan semangat.\nSelamat Hari Jadi! 🎂✨";
+    msg = `Kepada ${ownerName},\nSemoga hari lahirmu dipenuhi dengan kebahagiaan, kesihatan, dan kejayaan.\nTerima kasih kerana menjadi insan yang memberi inspirasi dan semangat.\nSelamat Hari Jadi! 🎂✨`;
   } else if (type === "kad") {
-    msg = "🎉 HAPPY BIRTHDAY 🎉\nSemoga senyumanmu terus mekar,\nimpianmu tercapai, dan hidupmu penuh warna.\nNikmati hari istimewa ini dengan penuh kegembiraan! 🎁🥳";
+    msg = `🎉 HAPPY BIRTHDAY ${ownerName} 🎉\nSemoga senyumanmu terus mekar,\nimpianmu tercapai, dan hidupmu penuh warna.\nNikmati hari istimewa ini dengan penuh kegembiraan! 🎁🥳`;
   }
   document.getElementById("message").innerText = msg;
 }
